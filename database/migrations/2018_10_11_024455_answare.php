@@ -19,7 +19,7 @@ class   Answare extends Migration
             $table->integer('fecha');
             $table->integer('hora');
             $table->integer('usuario_id')->unsigned();
-            $table->foreign('usuario_id')->references('id')->on('usuario');
+            $table->foreign('usuario_id')->references('id')->on('user');
             $table->integer('evaluacion_id')->unsigned();
             $table->foreign('evaluacion_id')->references('id')->on('evaluacion');
     
