@@ -22,7 +22,8 @@ class DatosPersonales extends Migration
             $table->string('apellido_paterno');
             $table->string('genero');
             $table->integer('telefono');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });
       

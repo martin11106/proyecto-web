@@ -20,7 +20,8 @@ class QuestionUser extends Migration
             $table->foreign('question_id')->references('id')->on('question');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('user');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });
      

@@ -20,7 +20,8 @@ class User extends Migration
             $table->foreign('datos_personales_id')->references('id')->on('datos_personales');
             $table->integer('datos_user_id')->unsigned();
             $table->foreign('datos_user_id')->references('id')->on('datos_user');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });
            

@@ -20,7 +20,8 @@ class  QuestionAnsware extends Migration
             $table->foreign('question_id')->references('id')->on('question');
             $table->integer('answare_id')->unsigned();
             $table->foreign('answare_id')->references('id')->on('answare');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });
     }

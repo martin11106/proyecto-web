@@ -19,7 +19,8 @@ class DatosUser extends Migration
             $table->string('correo');
             $table->string('password');
             $table->string('matricula');
-    
+            $table->rememberToken();
+            $table->timestamps();
             
 
         });

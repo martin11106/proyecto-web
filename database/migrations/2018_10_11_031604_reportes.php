@@ -21,7 +21,8 @@ class Reportes extends Migration
             $table->integer('answare_id')->unsigned();
             $table->foreign('answare_id')->references('id')->on('answare');
             $table->string('descripcion');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });     
     }

@@ -24,7 +24,8 @@ class Question extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('status');
-            
+            $table->rememberToken();
+            $table->timestamps();
 
         });
         

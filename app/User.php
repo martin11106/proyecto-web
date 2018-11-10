@@ -20,6 +20,10 @@ class User extends Authenticatable
         'datos_personales_id','datos_user_id'
     ];
 
+
+
+
+    
     /**
      * The attributes that should be hidden for arrays.
      *
