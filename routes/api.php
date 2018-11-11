@@ -20,3 +20,15 @@ Route::get('/user','userController@index');
 Route::post('user','userController@guardar');
 Route::put('user/{id}','userController@update');
 Route::delete('user/{id}','userController@delete');
+Route::post('auth/register', 'AuthController@register');
+
+
+Route::post('auth/login', 'AuthController@login');
+Route::group(['middleware' => 'jwt.auth'], function(){
+  Route::get('auth/user', 'AuthController@user');
+  Route::post('auth/logout', 'AuthController@logout');
+});
+
+Route::group(['middleware' => 'jwt.refresh'], function(){
+  Route::get('auth/refresh', 'AuthController@refresh');
+});
