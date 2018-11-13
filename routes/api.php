@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\reportes;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,11 @@ Route::group(['middleware' => 'jwt.auth'], function(){
 Route::group(['middleware' => 'jwt.refresh'], function(){
   Route::get('auth/refresh', 'AuthController@refresh');
 });
+
+
+
+Route::get('/reportes','reportesController@index');  //yaaa
+Route::post('/reportes','reportesController@store'); //yaaaaaa
+Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
+Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
+Route::get('/reportes/{id}','reportesController@show');//yaaaaa   

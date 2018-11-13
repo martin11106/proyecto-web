@@ -37,6 +37,67 @@ class reportesController extends Controller
             return redirect('reportes');
             //        reportes es el modelo
                 }
+
+
+
+                                      /////////////API////////////////////
+
+    public function index()
+    {
+       return reportes::all();
+    }
+    ////Ya funciona
+
+
+
+
+
+        public function store(Request $request)
+        {
+        $reporte = new reportes();
+
+        $reporte->fill([
+            'user_id' => $request->user_id,
+            'answare_id' => $request->answare_id,
+            'descripcion' => $request->descripcion
+
+        ]);
+
+        $reporte->save();
+        return $reporte;
+        }
         
+
+    public function show($id)
+    {
+        return reportes::find($id);
+    
+    }
+    ////Ya funciona
+
+
+
+
+
+
+    public function update(Request $request, $id)
+    {
+        $reporte =reportes::find($id);
+        $data = [
+            'user_id' => $request->user_id,
+            'answare_id' => $request->answare_id,
+            'descripcion' => $request->descripcion
+        ];
+        $reporte->update($data);
+        return $reporte;
+    }
+
+    public function destroy($id)
+    {
+        $reporte =reportes::find($id);
+        $reporte->delete();
+        return 'true';
+
+    }
 
 }
