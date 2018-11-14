@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class reportes extends Model
 {
-    protected $table='datos_user';
+    protected $table='reportes';
     protected $fillable =[
         'user_id','answare_id','descripcion'
     ];
+
 }

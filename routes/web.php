@@ -19,3 +19,9 @@ Route::get('/blog', function (){
 });
 
 Route::post('/usuario','userController@guardar');
+
+Route::get('/reportes','reportesController@index');  //yaaa
+Route::post('/reportes','reportesController@store'); //yaaaaaa
+Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
+Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
+Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
