@@ -20,6 +20,14 @@ Route::get('/blog', function (){
 
 Route::post('/usuario','userController@guardar');
 
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/reportes','reportesController@index');  //yaaa
+Route::post('/reportes','reportesController@store'); //yaaaaaa
+Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
+Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
+Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
+>>>>>>> c7b5b8d34e5954c40ab1e3222fd41c4d67fad72f

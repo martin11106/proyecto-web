@@ -8,7 +8,10 @@ use App\reportes;
 
 class reportesController extends Controller
 {
-        public function crearReportes(){
+    public function index(){
+        return reportes::all();
+    }
+    public function crearReportes(){
         return view ('Reportes.crear', compact('reportes'));
      }
 
@@ -37,6 +40,7 @@ class reportesController extends Controller
             return redirect('reportes');
             //        reportes es el modelo
                 }
+
         
 
 }
