@@ -19,3 +19,7 @@ Route::get('/blog', function (){
 });
 
 Route::post('/usuario','userController@guardar');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
