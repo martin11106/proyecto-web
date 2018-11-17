@@ -18,9 +18,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt distinctio expedita consectetur necessitatibus error impedit velit saepe perferendis quos, blanditiis officia ab et, neque tempora excepturi exercitationem repellendus? Quidem, nostrum.
-        </div>
+            <div class="col-md-3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt distinctio expedita consectetur necessitatibus error impedit velit saepe perferendis quos, blanditiis officia ab et, neque tempora excepturi exercitationem repellendus? Quidem, nostrum.
+            </div>
       </div>
  </div>
     </section> 
