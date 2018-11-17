@@ -13990,7 +13990,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(47);
+module.exports = __webpack_require__(49);
 
 
 /***/ }),
@@ -47467,6 +47467,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -47519,15 +47524,33 @@ var staticRenderFns = [
                         _vm._v("Pregunta")
                       ]),
                       _vm._v(" "),
-                      _c("input", {
-                        staticClass: "form-control form-control-lg",
-                        attrs: { type: "text", placeholder: "preunta" }
-                      }),
+                      _c("form", { staticClass: "form-inline" }, [
+                        _c("i", {
+                          staticClass: "fa fa-search",
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "form-control form-control ",
+                          staticStyle: {
+                            "background-color": "white",
+                            "border-radius": "5px 5px 5px 5px",
+                            width: "500px",
+                            height: "40px"
+                          },
+                          attrs: {
+                            type: "text",
+                            placeholder: "Search",
+                            "aria-label": "Search"
+                          }
+                        })
+                      ]),
                       _vm._v(" "),
                       _c(
                         "button",
                         {
-                          staticClass: "btn btn-success btn-lg",
+                          staticClass: "btn btn-success btn-lg active",
+                          staticStyle: { "margin-top": "-10px" },
                           attrs: { type: "submit" }
                         },
                         [_vm._v(" buscar")]
@@ -47559,9 +47582,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(52)
+var __vue_script__ = __webpack_require__(47)
 /* template */
-var __vue_template__ = __webpack_require__(53)
+var __vue_template__ = __webpack_require__(48)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -47601,16 +47624,6 @@ module.exports = Component.exports
 
 /***/ }),
 /* 47 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47652,7 +47665,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 53 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47686,7 +47699,7 @@ var staticRenderFns = [
                 "div",
                 { staticClass: "text-center", staticStyle: { margin: "10px" } },
                 [
-                  _c("button", { staticClass: "btn btn-primary" }, [
+                  _c("button", { staticClass: "btn btn-primary active" }, [
                     _vm._v(" preguntar")
                   ])
                 ]
@@ -47732,6 +47745,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-72948082", module.exports)
   }
 }
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

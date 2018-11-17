@@ -7,7 +7,7 @@
     <div class="col-md-9">
         <h1 class="text-center" style="font-size: 64px"> preguntas frecuentes</h1>
         <div class="text-center" style="margin: 10px;">
-            <button class="btn btn-primary"> preguntar</button>
+            <button class="btn btn-primary active"> preguntar</button>
         </div>
  
         <div class="card">

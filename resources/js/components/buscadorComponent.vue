@@ -12,8 +12,13 @@
                     <form action="" class="form-inline justify-content-center text-center">
                         <div class="form-group">
                                 <label class="sr-only">Pregunta</label>
-                            <input type="text" class="form-control form-control-lg" placeholder="preunta">
-                            <button type="submit" class="btn btn-success btn-lg"> buscar</button>
+                        <form class="form-inline">
+  <i class="fa fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control " style="background-color:white;border-radius: 5px 5px 5px 5px;width:500px;height:40px" type="text" placeholder="Search" aria-label="Search">
+</form>
+
+                            <button type="submit" class="btn btn-success btn-lg active" style="margin-top:-10px"> buscar</button>
+                        
                         </div>
                       
                     </form>
