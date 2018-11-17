@@ -24,6 +24,8 @@ class Question extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('status');
+            $table->integer('materia_id')->unsigned();
+            $table->foreign('materia_id')->references('id')->on('materia');
             $table->rememberToken();
             $table->timestamps();
 
