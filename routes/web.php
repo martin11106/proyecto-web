@@ -18,6 +18,10 @@ Route::get('/blog', function (){
     return view('welcome');
 });
 
+route::get('/test',function(){
+    return view('test');
+});
+
 Route::post('/usuario','userController@guardar');
 
 Auth::routes();
@@ -27,4 +31,11 @@ Route::get('/reportes','reportesController@index');  //yaaa
 Route::post('/reportes','reportesController@store'); //yaaaaaa
 Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
 Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
-Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
+Route::get('/reportes/{id}','reportesController@show');//yaaaaa
+
+//---Hacer Preguntas ---
+
+Route::apiResource('/makeQuestion','makeQuestionController');
+
+
+//----------------------

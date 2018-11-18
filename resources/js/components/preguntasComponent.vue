@@ -1,6 +1,6 @@
 
 <template>
-
+<div class="row justify-content-center">
 <section>
  <div class="container" style="margin-top: 5%">
    <div class="row">
@@ -9,7 +9,7 @@
         <div class="text-center" style="margin: 10px;">
             <button class="btn btn-primary active"> preguntar</button>
         </div>
- 
+
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Special title treatment</h5>
@@ -23,7 +23,8 @@
             </div>
       </div>
  </div>
-    </section> 
+    </section>
+</div>
 </template>
 
 <script>
