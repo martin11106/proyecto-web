@@ -16,13 +16,14 @@ class User extends Migration
         Schema::create('user', function (Blueprint $table) {
             Schema::defaultStringLength(191); 
             $table->increments('id');       $table->string('nombre');
-            $table->string('apellido_materno');
             $table->string('apellido_paterno');
+            $table->string('apellido_materno');           
             $table->string('matricula');
             $table->string('correo');
             $table->string('password');
             $table->string('genero');
             $table->integer('telefono');
+            $table->integer('puntos');
             $table->rememberToken();
             $table->timestamps();
 

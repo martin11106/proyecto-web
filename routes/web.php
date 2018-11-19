@@ -18,6 +18,12 @@ Route::get('/blog', function (){
     return view('welcome');
 });
 
+
+Route::get('/t', function (){
+    return view('ranking');
+});
+
+
 Route::post('/usuario','userController@guardar');
 
 Auth::routes();
@@ -28,3 +34,5 @@ Route::post('/reportes','reportesController@store'); //yaaaaaa
 Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
 Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
 Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
+
+Route::resource('user', 'userController',['except'=>'show']);
