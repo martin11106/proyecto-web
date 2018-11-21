@@ -9,38 +9,32 @@ use App\user;
 class userController extends Controller
 {
     public function index(){
-        $usuario=datos_personales::All();
-        $usuario_datos=datos_user::All();
-        return $usuario." ".$usuario_datos;
+        
+        $usuario=user::orderBy('puntos', 'DESC')->take(2)->get();
+        return $usuario;
     }
     //crea un usuario
     public function guardar(Request $request){
-        $usuario=new datos_personales();
+        $usuario=new user();
         $usuario->fill([
              'nombre'=>$request->nombre,
              'apellido_paterno'=>$request->apellido_paterno,
-             'apellido_materno'=>"loremdas2",
-             'genero'=>"hola",
-             'telefono'=>" 21232"
+             'apellido_materno'=>$request->apellido_materno,
+             'matricula'=>$request->matricula,
+             'correo'=>$request->correo,
+             'password'=>$request->password,
+             'genero'=>$request->genero,
+             'telefono'=>$request->telefono,
+             'puntos'=>" 0",
+
 
          ]);
-         $usuario_datos=new datos_user();
-         $usuario_datos->fill([
-              'correo'=>$request->correo,
-              'password'=>'43DSA2',
-              'matricula'=>"243",
-          ]);
-          $usuario_datos->save();
-          $usuario->save();
-         
-          return $usuario." ".$usuario_datos;
     }
     //resive de parametro un id y elimina un usuario
     public function delete($id){
-        $usuario=datos_personales::find($id);
-        $usuario_datos=datos_user::find($id);
+        $usuario=user::find($id);
         $usuario->delete();
-        $usuario_datos->delete();
+       
         return $usuario;
     }
     public function show($id)
@@ -51,23 +45,20 @@ class userController extends Controller
     }
     //resive de parametro un usuario y modifica 
     public function update($id, Request $request){
-        $usuario=datos_personales::find($id);
+        $usuario=user::find($id);
         $data=([
             'nombre'=>$request->nombre,
-            'apellido_paterno'=>$request->apellido_paterno,
-            'apellido_materno'=>"loredasmdas2",
-            'genero'=>"holasda",
-            'telefono'=>" 2123122"
-        ]);
-        $usuario_datos=datos_user::find($id);
-        $datos=([
+             'apellido_paterno'=>$request->apellido_paterno,
+             'apellido_materno'=>$request->apellido_materno,
+             'matricula'=>$request->matricula,
              'correo'=>$request->correo,
-             'password'=>'4312DSA2',
-             'matricula'=>"21243",
-         ]);
+             'password'=>$request->password,
+             'genero'=>$request->genero,
+             'telefono'=>$request->telefono,
+             'puntos'=>" 0",
+        ]);
         $usuario->update($data);
-        $usuario_datos->update($datos);
-        return $usuario." ".$usuario_datos;
+        return $usuario;
     }
     
     public function login(){
