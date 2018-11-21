@@ -51,8 +51,10 @@
                                 this.titulo='';
                 axios.post('/makeQuestion', params).then((response) => {
                     const pregunta = response.data;
-                });
-
+                })
+.catch(response => {
+  dispatch(authError(response.response.data.error));
+});
             }
         }
     }

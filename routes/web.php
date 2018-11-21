@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece primero */
-    return view('blog');
+    return view('create');
 });
 Route::get('/blog', function (){
     return view('welcome');

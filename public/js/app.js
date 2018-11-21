@@ -47734,7 +47734,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("div", { staticClass: "col-md-3" }, [
                 _vm._v(
-                  "\n            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt distinctio expedita consectetur necessitatibus error impedit velit saepe perferendis quos, blanditiis officia ab et, neque tempora excepturi exercitationem repellendus? Quidem, nostrum.\n            "
+                  "\r\n            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt distinctio expedita consectetur necessitatibus error impedit velit saepe perferendis quos, blanditiis officia ab et, neque tempora excepturi exercitationem repellendus? Quidem, nostrum.\r\n            "
                 )
               ])
             ])
@@ -47861,6 +47861,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.titulo = '';
             axios.post('/makeQuestion', params).then(function (response) {
                 var pregunta = response.data;
+            }).catch(function (response) {
+                dispatch(authError(response.response.data.error));
             });
         }
     }
