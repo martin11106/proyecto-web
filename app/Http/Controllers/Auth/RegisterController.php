@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Mail\TestEmail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+
 class RegisterController extends Controller
+
 {
     /*
     |--------------------------------------------------------------------------
@@ -75,5 +78,9 @@ class RegisterController extends Controller
    
        
    
+    }
+
+    function nuevoUser(Request $request){
+        
     }
 }

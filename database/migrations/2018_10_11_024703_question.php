@@ -15,12 +15,9 @@ class Question extends Migration
     {
         Schema::create('question', function (Blueprint $table) {
             Schema::defaultStringLength(191); 
-            $table->increments('id');
-            $table->integer('fecha');
-            $table->integer('hora');
-          
+            $table->increments('id');          
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('status');

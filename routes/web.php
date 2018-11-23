@@ -14,8 +14,9 @@
 Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece primero */
     return view('login');
 });
-Route::get('/blog', function (){
-    return view('create');
+
+Route::get('/blog', function () {
+    return view('welcome');
 });
 
 
@@ -24,13 +25,11 @@ Route::get('/t', function (){
 });
 
 
-route::get('/test',function(){
+Route::get('/test',function(){
     return view('test');
 });
 
 Route::post('/usuario','userController@guardar');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/reportes','reportesController@index');  //yaaa
@@ -47,4 +46,15 @@ Route::get('/reportes/{id}','reportesController@show');//yaaaaa
 Route::apiResource('/makeQuestion','makeQuestionController');
 
 
-//----------------------
+//---------------------------------------------------------
+// AQUI EMPEZÓ A TRABAJAR EL GRAN Y PODEROSO SMARTNETO
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/saveuser','userController@guardar');
+
+Route::post('login','Auth\LoginController@login')->name('login');
+
+Route::get('/logout','Auth\LoginController@logout')->name('logout');

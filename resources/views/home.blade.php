@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
+    <a href="/logout" class="btn btn-danger">Cerrar Sesion</a>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Bienvenido {{$user->nombre}}</div>
 
                 <div class="card-body">
                     @if (session('status'))

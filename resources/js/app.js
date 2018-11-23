@@ -20,6 +20,8 @@ Vue.component('tabla', require('./components/tablaComponent.vue'));
 Vue.component('menu-component', require('./components/menuComponent.vue'));
 Vue.component('buscador-component', require('./components/buscadorComponent.vue'));
 Vue.component('preguntas-component', require('./components/preguntasComponent.vue'));
+
+
 Vue.component('hacer-component', require('./components/hacerPreguntasComponent.vue'));
 const app = new Vue({
     el: '#app'
