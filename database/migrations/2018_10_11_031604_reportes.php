@@ -17,7 +17,7 @@ class Reportes extends Migration
             Schema::defaultStringLength(191); 
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->integer('answare_id')->unsigned();
             $table->foreign('answare_id')->references('id')->on('answare');
             $table->string('descripcion');
