@@ -36,7 +36,7 @@ Route::get('/reportes','reportesController@index');  //yaaa
 Route::post('/reportes','reportesController@store'); //yaaaaaa
 Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
 Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
-Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
+Route::get('/reportes/{id}','reportesController@show');//yaaaaa
 
 Route::resource('user', 'userController',['except'=>'show']);
 Route::get('/reportes/{id}','reportesController@show');//yaaaaa
@@ -45,6 +45,14 @@ Route::get('/reportes/{id}','reportesController@show');//yaaaaa
 
 Route::apiResource('/makeQuestion','makeQuestionController');
 
+// rutas de matrias
+
+Route::apiResource('/materias','materiaController');
+
+// el de abajo miente
+//        |
+//        |
+//        v
 
 //---------------------------------------------------------
 // AQUI EMPEZÓ A TRABAJAR EL GRAN Y PODEROSO SMARTNETO

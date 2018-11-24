@@ -1,6 +1,4 @@
-<h1>lalala</h1>
-
-@extends('layouts.app')
+@extends('app.app')
 
 @section('content')
 

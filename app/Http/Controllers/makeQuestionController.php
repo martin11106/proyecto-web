@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\question;
+use App\materia;
 
 class makeQuestionController extends Controller
 {
@@ -21,12 +22,12 @@ class makeQuestionController extends Controller
     public function store(Request $request)
     {
         $pregunta=new question();
+        $materias=materia::where('materia',$request->materia)->get();
         $pregunta->titulo = $request->titulo;
         $pregunta->user_id = auth()->id();
         $pregunta->descripcion= $request->descripcion;
         $pregunta->status= "sin contestar";
-        $pregunta->hora="1";
-        $pregunta->fecha="2";
+        $pregunta->materia_id=$materias[0]->id;
         $pregunta->save();
         return $pregunta;
     }
