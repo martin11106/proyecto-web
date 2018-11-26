@@ -1,6 +1,5 @@
 <template>
-<div class="container">
-  <div class="row">
+
     <div class="col-md-4"  style=" margin-top: 7%">
         <div class="card"  style="border-radius: 12px 12px 12px 12px; ">
             <h1 style="margin-left: 30px;margin-top: 20px ">Que quiere saber</h1>
@@ -15,9 +14,6 @@
           </div>
           </div>
       
-  
-  </div>
-  </div>
 </template>
 
 <script>

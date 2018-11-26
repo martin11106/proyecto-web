@@ -14022,6 +14022,7 @@ Vue.component('preguntas-component', __webpack_require__(52));
 Vue.component('hacer-component', __webpack_require__(55));
 Vue.component('respuesta', __webpack_require__(58));
 Vue.component('visualizar-pregunta', __webpack_require__(66));
+Vue.component('resp', __webpack_require__(69));
 var app = new Vue({
   el: '#app'
 });
@@ -48523,10 +48524,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
@@ -48566,73 +48563,65 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
+    return _c(
+      "div",
+      { staticClass: "col-md-4", staticStyle: { "margin-top": "7%" } },
+      [
         _c(
           "div",
-          { staticClass: "col-md-4", staticStyle: { "margin-top": "7%" } },
+          {
+            staticClass: "card",
+            staticStyle: { "border-radius": "12px 12px 12px 12px" }
+          },
           [
             _c(
-              "div",
-              {
-                staticClass: "card",
-                staticStyle: { "border-radius": "12px 12px 12px 12px" }
-              },
-              [
-                _c(
-                  "h1",
-                  {
-                    staticStyle: { "margin-left": "30px", "margin-top": "20px" }
-                  },
-                  [_vm._v("Que quiere saber")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-danger active",
-                    attrs: {
-                      "data-toggle": "modal",
-                      "data-target": "#create",
-                      "data-whatever": "@mdo"
-                    }
-                  },
-                  [_vm._v(" preguntar")]
-                )
-              ]
+              "h1",
+              { staticStyle: { "margin-left": "30px", "margin-top": "20px" } },
+              [_vm._v("Que quiere saber")]
             ),
             _vm._v(" "),
             _c(
-              "div",
+              "a",
               {
-                staticClass: "card",
-                staticStyle: {
-                  "border-radius": "12px 12px 12px 12px",
-                  "margin-top": "5%"
+                staticClass: "btn btn-danger active",
+                attrs: {
+                  "data-toggle": "modal",
+                  "data-target": "#create",
+                  "data-whatever": "@mdo"
                 }
               },
-              [
-                _c(
-                  "h6",
-                  {
-                    staticStyle: { "margin-left": "30px", "margin-top": "20px" }
-                  },
-                  [_vm._v("Nombre "), _c("span", [_vm._v("Materia ")])]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, obcaecati distinctio dolorem fugiat quaerat in maxime dignissimos alias dolorum? Neque architecto dignissimos a ratione veritatis fugiat at. Cum, quibusdam nisi."
-                    )
-                  ])
-                ])
-              ]
+              [_vm._v(" preguntar")]
             )
           ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "card",
+            staticStyle: {
+              "border-radius": "12px 12px 12px 12px",
+              "margin-top": "5%"
+            }
+          },
+          [
+            _c(
+              "h6",
+              { staticStyle: { "margin-left": "30px", "margin-top": "20px" } },
+              [_vm._v("Nombre "), _c("span", [_vm._v("Materia ")])]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, obcaecati distinctio dolorem fugiat quaerat in maxime dignissimos alias dolorum? Neque architecto dignissimos a ratione veritatis fugiat at. Cum, quibusdam nisi."
+                )
+              ])
+            ])
+          ]
         )
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -48882,6 +48871,97 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-06ba6612", module.exports)
+  }
+}
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(70)
+/* template */
+var __vue_template__ = __webpack_require__(71)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/respuesta.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4e638605", Component.options)
+  } else {
+    hotAPI.reload("data-v-4e638605", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("visualizar-pregunta"), _vm._v(" "), _c("respuesta")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4e638605", module.exports)
   }
 }
 

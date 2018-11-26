@@ -23,6 +23,7 @@ Vue.component('preguntas-component', require('./components/preguntasComponent.vu
 Vue.component('hacer-component', require('./components/hacerPreguntasComponent.vue'));
 Vue.component('respuesta', require('./components/respuestaComponent.vue'));
 Vue.component('visualizar-pregunta', require('./components/visualizarPregunta.vue'));
+Vue.component('resp', require('./components/respuesta.vue'));
 const app = new Vue({
     el: '#app'
 });
