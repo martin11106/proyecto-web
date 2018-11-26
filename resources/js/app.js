@@ -23,13 +23,9 @@ Vue.component('buscador-component', require('./components/buscadorComponent.vue'
 Vue.component('preguntas-component', require('./components/preguntasComponent.vue'));
 
 Vue.component('hacer-component', require('./components/hacerPreguntasComponent.vue'));
-<<<<<<< HEAD
-
-=======
 Vue.component('respuesta', require('./components/respuestaComponent.vue'));
 Vue.component('visualizar-pregunta', require('./components/visualizarPregunta.vue'));
 Vue.component('resp', require('./components/respuesta.vue'));
->>>>>>> 1ab3e8162034e37d208fbf4a1e9b522321b48620
 const app = new Vue({
     el: '#app'
 });

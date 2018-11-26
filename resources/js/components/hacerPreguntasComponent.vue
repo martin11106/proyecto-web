@@ -6,10 +6,12 @@
                 <form action="" v-on:submit.prevent="newPregunta">
                         <div class="form-group shadow-textarea">
                          <h4> Pregunta sobre tu tarea</h4>
-                                <div class="form-group row" >
-
-                                    <label for="">Titulo:</label>
-                                    <input type="text" v-model="titulo">
+                        <br>
+                         <div >
+                               <input type="text" style="border-radius: 12px 12px 12px 12px; "  class="form-control" v-model="titulo"  placeholder="titulo de pregunta">
+                         </div>
+                         <br>
+                                <div class="form-group row" >    
                                       <textarea class="form-control border border-secondar rounded" id="exampleFormControlTextarea3" rows="7" placeholder="Escribe tu pregunta " style="border-radius: 5px 5px 5px 5px;" v-model="description"></textarea>
                                   </div>
                          </div>
