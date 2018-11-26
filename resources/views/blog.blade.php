@@ -47,7 +47,6 @@
   <div> 
 
 
-    
-<respuesta></respuesta>
- 
+    <resp></resp>
+
 @endsection

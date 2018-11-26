@@ -6,7 +6,16 @@ Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece prime
     return view('login');
 });
 
+<<<<<<< HEAD
 Route::get('/ranking', function () {/* la diagonal es la raiz y es lo que aparece primero */
+=======
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+
+Route::get('/t', function (){
+>>>>>>> 1ab3e8162034e37d208fbf4a1e9b522321b48620
     return view('ranking');
 });
 Route::get('/blog', function (){
