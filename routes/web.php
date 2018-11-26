@@ -14,23 +14,22 @@
 Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece primero */
     return view('blog');
 });
+
+Route::get('/ranking', function () {/* la diagonal es la raiz y es lo que aparece primero */
+    return view('ranking');
+});
 Route::get('/blog', function (){
     return view('welcome');
 });
 
-<<<<<<< HEAD
-
-Route::get('/t', function (){
-    return view('ranking');
+Route::get('/perfil', function (){
+    return view('perfil');
 });
 
-
-=======
 route::get('/test',function(){
     return view('test');
 });
 
->>>>>>> 7e08d0dd91da01677f6d2c545c8d18375659067f
 Route::post('/usuario','userController@guardar');
 
 Auth::routes();
@@ -40,11 +39,11 @@ Route::get('/reportes','reportesController@index');  //yaaa
 Route::post('/reportes','reportesController@store'); //yaaaaaa
 Route::put('/reportes/{id}','reportesController@update'); //yaaaaa
 Route::delete('/reportes/{id}','reportesController@destroy');//yaaaaaaaaa
-<<<<<<< HEAD
+
 Route::get('/reportes/{id}','reportesController@show');//yaaaaa   
 
-Route::resource('user', 'userController',['except'=>'show']);
-=======
+Route::resource('user', 'userController');
+
 Route::get('/reportes/{id}','reportesController@show');//yaaaaa
 
 //---Hacer Preguntas ---
@@ -53,4 +52,3 @@ Route::apiResource('/makeQuestion','makeQuestionController');
 
 
 //----------------------
->>>>>>> 7e08d0dd91da01677f6d2c545c8d18375659067f

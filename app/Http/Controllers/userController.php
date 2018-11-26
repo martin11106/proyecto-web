@@ -13,6 +13,12 @@ class userController extends Controller
         $usuario=user::orderBy('puntos', 'DESC')->take(2)->get();
         return $usuario;
     }
+
+
+    
+
+
+
     //crea un usuario
     public function guardar(Request $request){
         $usuario=new user();
@@ -39,9 +45,8 @@ class userController extends Controller
     }
     public function show($id)
     {
-        $usuario= datos_personales::find($id);
-        $usuario_datos=  datos_user::find($id);
-        return $usuario.' '.$usuario_datos;
+        $usuario=user::find($id);
+        return $usuario;
     }
     //resive de parametro un usuario y modifica 
     public function update($id, Request $request){

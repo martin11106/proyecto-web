@@ -15,17 +15,15 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('pperfil', require('./components/pruebaPerfilComponent.vue'));
 Vue.component('perfil', require('./components/perfilComponent.vue'));
 Vue.component('tabla', require('./components/tablaComponent.vue'));
 Vue.component('menu-component', require('./components/menuComponent.vue'));
 Vue.component('buscador-component', require('./components/buscadorComponent.vue'));
 Vue.component('preguntas-component', require('./components/preguntasComponent.vue'));
-<<<<<<< HEAD
 
-
-=======
 Vue.component('hacer-component', require('./components/hacerPreguntasComponent.vue'));
->>>>>>> 7e08d0dd91da01677f6d2c545c8d18375659067f
+
 const app = new Vue({
     el: '#app'
 });
