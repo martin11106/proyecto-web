@@ -24,3 +24,6 @@ align-items: center;
 .shadow-textarea textarea.form-control {
     padding-left: 0.8rem;
 }
+.top{
+   margin-top: 5%
+}

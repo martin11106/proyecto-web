@@ -16,7 +16,7 @@ Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece prime
 });
 
 Route::get('/blog', function () {
-    return view('login');
+    return view('register');
 });
 
 
