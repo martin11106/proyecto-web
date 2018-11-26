@@ -13,12 +13,12 @@
                             <input  placeholder="Ingresa tu email"  name="email"  class="form-control border border-secondar" style="border-radius: 10px 10px 10px 10px; border-color: #F1F4F7;margin-left: 22%;width: 150%" id="">
                             {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                         </div>
-                        <br>
+                        
                     <div class="row top {{ $errors->has('password') ? 'has-error' : ''}}">
                             <input type="password" name="password"  placeholder="Ingresa tu password" class="form-control border border-secondar " style="border-radius: 10px 10px 10px 10px; border-color: #F1F4F7;margin-left: 22%;width: 150%" id="">
                             {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                         </div>
-                    <br>
+                    
                     <div>
                             <a class="text-center" href="#">¿olvide mi contraseña?</a>
                     </div>   
