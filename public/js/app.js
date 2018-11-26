@@ -48008,7 +48008,7 @@ var render = function() {
           _c(
             "tbody",
             _vm._l(_vm.datas, function(data) {
-              return _c("tr", [
+              return _c("tr", { key: data.id }, [
                 _c("td", { staticStyle: { width: "100px" } }, [
                   _vm._v(
                     _vm._s(
@@ -48495,7 +48495,10 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c(
                       "a",
-                      { staticClass: "btn btn-primary", attrs: { href: "#" } },
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { "h¿ref": "#" }
+                      },
                       [_vm._v("Go somewhere")]
                     )
                   ])
@@ -48601,13 +48604,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             description: '',
             titulo: '',
-            user: ''
+            user: '',
+            materias: [],
+            select: ''
         };
     },
     mounted: function mounted() {
@@ -48617,6 +48625,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var temp = response.data;
             _this.user = temp[0];
         });
+        axios.get('/materias').then(function (response) {
+            var temp2 = response.data;
+            _this.materias = temp2;
+        });
     },
 
 
@@ -48624,11 +48636,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         newPregunta: function newPregunta() {
             var params = {
                 descripcion: this.description,
-                titulo: this.titulo
-
+                titulo: this.titulo,
+                materia: this.select
             };
             this.description = '';
             this.titulo = '';
+            this.select = '';
             axios.post('/makeQuestion', params).then(function (response) {
                 var pregunta = response.data;
             });
@@ -48645,85 +48658,148 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row justify-content-center" }, [
-    _c("div", { staticClass: "col-md-8" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }, [
-          _vm._v(" Hola " + _vm._s(_vm.user.name) + " realiza tu pregunta")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c(
-            "form",
-            {
-              attrs: { action: "" },
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.newPregunta($event)
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "" } }, [_vm._v("Titulo:")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.titulo,
-                      expression: "titulo"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "titulo" },
-                  domProps: { value: _vm.titulo },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.titulo = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "" } }, [_vm._v("pregunta: ")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.description,
-                      expression: "description"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "pregunta" },
-                  domProps: { value: _vm.description },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.description = $event.target.value
-                    }
-                  }
-                })
-              ]),
-              _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "col-md-7", staticStyle: { "margin-top": "7%" } },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "card",
+            staticStyle: { "border-radius": "12px 12px 12px 12px" }
+          },
+          [
+            _c("div", { staticClass: "card-body" }, [
               _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Enviar pregunta")]
+                "form",
+                {
+                  attrs: { action: "" },
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.newPregunta($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "form-group shadow-textarea" }, [
+                    _c("h4", [_vm._v(" Pregunta sobre tu tarea")]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group row" }, [
+                      _c("label", { attrs: { for: "" } }, [_vm._v("Titulo:")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.titulo,
+                            expression: "titulo"
+                          }
+                        ],
+                        attrs: { type: "text" },
+                        domProps: { value: _vm.titulo },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.titulo = $event.target.value
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.description,
+                            expression: "description"
+                          }
+                        ],
+                        staticClass:
+                          "form-control border border-secondar rounded",
+                        staticStyle: { "border-radius": "5px 5px 5px 5px" },
+                        attrs: {
+                          id: "exampleFormControlTextarea3",
+                          rows: "7",
+                          placeholder: "Escribe tu pregunta "
+                        },
+                        domProps: { value: _vm.description },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.description = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.select,
+                          expression: "select"
+                        }
+                      ],
+                      staticClass: "browser-default custom-select",
+                      staticStyle: {
+                        width: "38%",
+                        "border-radius": "5px 5px 5px 5px"
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.select = $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { selected: "" } }, [
+                        _vm._v("Open this select menu")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.materias, function(materia) {
+                        return _c("option", { key: materia.id }, [
+                          _vm._v(_vm._s(materia.materia))
+                        ])
+                      })
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Enviar pregunta")]
+                  )
+                ]
               )
-            ]
-          )
-        ])
-      ])
-    ])
+            ])
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = []

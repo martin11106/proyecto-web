@@ -16,12 +16,9 @@ class   Answare extends Migration
         Schema::create('answare', function (Blueprint $table) {
             Schema::defaultStringLength(191); 
             $table->increments('id');
-            $table->integer('fecha');
-            $table->integer('hora');
+            $table->string('descripcion');
             $table->integer('usuario_id')->unsigned();
-            $table->foreign('usuario_id')->references('id')->on('user');
-            $table->integer('evaluacion_id')->unsigned();
-            $table->foreign('evaluacion_id')->references('id')->on('evaluacion');
+            $table->foreign('usuario_id')->references('id')->on('users');
             $table->rememberToken();
             $table->timestamps();
             

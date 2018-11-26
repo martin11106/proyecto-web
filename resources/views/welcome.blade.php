@@ -37,7 +37,8 @@
   </div>
 </nav>
 <div>
-  <menu-component></menu-component>  
+
+  <hacer-component></hacer-component>  
 
 </div>
 

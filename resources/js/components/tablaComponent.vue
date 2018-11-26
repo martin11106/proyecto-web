@@ -13,7 +13,7 @@
 				</tr>
             </thead>
                 <tbody >
-                    <tr v-for="data in datas">
+                    <tr v-for="data in datas" :key="data.id">
                         <td style="width:100px">{{ data.nombre+' '+ data.apellido_paterno +" "+ data.apellido_materno }}</td>
                         <td  style="width:60px"> {{ data.matricula }} </td>   
                         <td  style="width:60px"> {{ data.puntos }} </td>
