@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <preguntas-component> </preguntas-component>
+    <menu-component></menu-component>
 
 </div>
 
