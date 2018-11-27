@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "@angular/cli": "^7.0.6"
+        "@angular/cli": "^7.0.6",
+        "vue-route": "^1.5.1"
     }
 }

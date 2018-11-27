@@ -26,6 +26,8 @@ Vue.component('hacer-component', require('./components/hacerPreguntasComponent.v
 Vue.component('respuesta', require('./components/respuestaComponent.vue'));
 Vue.component('visualizar-pregunta', require('./components/visualizarPregunta.vue'));
 Vue.component('resp', require('./components/respuesta.vue'));
+
+import respuesta from  '@/components/respuestaComponent'
 const app = new Vue({
     el: '#app'
 });

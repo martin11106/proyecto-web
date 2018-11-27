@@ -7,16 +7,14 @@ Route::get('/', function () {/* la diagonal es la raiz y es lo que aparece prime
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('welcome');
 });
 
 
 Route::get('/t', function (){
     return view('ranking');
 });
-Route::get('/blog2', function (){
-    return view('welcome');
-});
+
 
 Route::get('/perfil', function (){
     return view('perfil');
