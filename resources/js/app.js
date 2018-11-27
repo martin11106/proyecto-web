@@ -27,11 +27,15 @@ window.Vue = require('vue');
 // Vue.component('visualizar-pregunta', require('./components/visualizarPregunta.vue'));
 // Vue.component('resp', require('./components/respuesta.vue'));
 
-import route from 'vue-route'
+import Router from 'vue-route'
 import respuesta from  '@/components/respuestaComponent'
 
+Vue.use(Router);
+export default new Router({
+    
+})
 
-Vue.use(route);
+
 const app = new Vue({
     el: '#app'
 });
