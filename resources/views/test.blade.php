@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <hacer-component> </hacer-component>
+    <preguntas-component> </preguntas-component>
 
 </div>
 
