@@ -116,9 +116,11 @@ class ComposerStaticInitca1ce8c688c6365546d6ff8f136ea7de
         'B' => 
         array (
             'BeyondCode\\DumpServer\\' => 22,
+            'Barryvdh\\Cors\\' => 14,
         ),
         'A' => 
         array (
+            'Asm89\\Stack\\' => 12,
             'App\\' => 4,
         ),
     );
@@ -294,6 +296,14 @@ class ComposerStaticInitca1ce8c688c6365546d6ff8f136ea7de
         array (
             0 => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src',
         ),
+        'Barryvdh\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-cors/src',
+        ),
+        'Asm89\\Stack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -350,9 +360,10 @@ class ComposerStaticInitca1ce8c688c6365546d6ff8f136ea7de
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\UpchiapasController' => __DIR__ . '/../..' . '/app/Http/Controllers/UpchiapasController.php',
-        'App\\Http\\Controllers\\answerController' => __DIR__ . '/../..' . '/app/Http/Controllers/answerController.php',
         'App\\Http\\Controllers\\blog' => __DIR__ . '/../..' . '/app/Http/Controllers/blog.php',
-        'App\\Http\\Controllers\\questionController' => __DIR__ . '/../..' . '/app/Http/Controllers/questionController.php',
+        'App\\Http\\Controllers\\makeAnswerController' => __DIR__ . '/../..' . '/app/Http/Controllers/makeAnswerController.php',
+        'App\\Http\\Controllers\\makeQuestionController' => __DIR__ . '/../..' . '/app/Http/Controllers/makeQuestionController.php',
+        'App\\Http\\Controllers\\materiaController' => __DIR__ . '/../..' . '/app/Http/Controllers/materiaController.php',
         'App\\Http\\Controllers\\reportesController' => __DIR__ . '/../..' . '/app/Http/Controllers/reportesController.php',
         'App\\Http\\Controllers\\userController' => __DIR__ . '/../..' . '/app/Http/Controllers/userController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -372,10 +383,15 @@ class ComposerStaticInitca1ce8c688c6365546d6ff8f136ea7de
         'App\\Upchiapas' => __DIR__ . '/../..' . '/app/Upchiapas.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\blog' => __DIR__ . '/../..' . '/app/blog.php',
-        'App\\datos_personales' => __DIR__ . '/../..' . '/app/datos_personales.php',
-        'App\\datos_user' => __DIR__ . '/../..' . '/app/datos_user.php',
+        'App\\materia' => __DIR__ . '/../..' . '/app/materia.php',
         'App\\question' => __DIR__ . '/../..' . '/app/question.php',
         'App\\reportes' => __DIR__ . '/../..' . '/app/reportes.php',
+        'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
+        'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
+        'Barryvdh\\Cors\\HandleCors' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandleCors.php',
+        'Barryvdh\\Cors\\HandlePreflight' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/HandlePreflight.php',
+        'Barryvdh\\Cors\\LumenServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/LumenServiceProvider.php',
+        'Barryvdh\\Cors\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-cors/src/ServiceProvider.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
         'BeyondCode\\DumpServer\\Dumper' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/Dumper.php',
